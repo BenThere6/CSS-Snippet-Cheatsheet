@@ -1,0 +1,92 @@
+:root {
+    --purple:rgb(232, 102, 236);
+    --gray:rgb(42, 42, 45);
+    --blue:rgb(85, 225, 211);
+    --white:rgb(232, 225, 225);
+    --border-radius:6px;
+}
+
+::-moz-selection {
+    color:var(--gray);
+    background-color: var(--blue);
+}
+
+::selection {
+    color:var(--gray);
+    background-color: var(--blue);
+}
+
+* {
+    background-color: var(--gray);
+    color: var(--purple);
+}
+
+h1 {
+    text-align: center;
+}
+
+#subheader {
+    text-align: center;   
+    color: var(--white);
+    margin:0 20% 30px 20%;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+    flex:1 1;
+}
+
+.code {
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%
+    );
+    color:var(--white);
+    border-radius: var(--border-radius);
+    user-select: all;
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    padding:7px;
+}
+
+.box, .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.box:hover, .box:hover .card-header {
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}
+
+.card-header {
+    position: relative;
+    margin-top: -20px;
+    border: var(--white) solid 1px;
+    border-radius: var(--border-radius);
+    padding-left:7px;
+}
+
+.box {
+    border: var(--white) 1px dotted;
+    margin:15px 10px 15px 10px;
+    padding:10px;
+}
+
+footer {
+    text-align: center;
+    margin:22px;
+}
+
+@media screen and (max-width:992px) {
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
